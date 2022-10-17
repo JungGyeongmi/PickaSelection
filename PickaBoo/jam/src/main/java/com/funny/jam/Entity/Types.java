@@ -22,8 +22,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString(exclude = {"type", "music", "cloth"})
-public class Type {
+@ToString(exclude = {"hash", "music", "cloth"})
+public class Types {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class Type {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumns({@JoinColumn(name="tag")
     ,@JoinColumn(name="category")})
-    private HashTags type;
+    private HashTags hash;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Music music;

@@ -15,9 +15,9 @@ public class BoardDto {
 
     private long bno;
 
-    private String[] musicType;
+    private String musicType;
 
-    private String[] clothType;
+    private String clothType;
 
     private String clothesPath;
 

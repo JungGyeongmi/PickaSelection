@@ -30,10 +30,10 @@ public class Clothes  extends BaseEntity {
     private long cno;
 
     private String clothName;
-    private String[] clothType;
+    private String clothType;
     private String clothPath;
 
     @OneToMany(fetch = FetchType.LAZY)
-    private List<Type> hashtag;
+    private List<Types> hashtag;
 
 }

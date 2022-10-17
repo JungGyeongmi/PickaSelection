@@ -31,8 +31,8 @@ public class Music {
 
     private String musicName;
     private String musicPath;
-    private String[] musicType;
+    private String musicType;
 
     @OneToMany(fetch = FetchType.LAZY)
-    private List<Type> hashtag;
+    private List<Types> hashtag;
 }

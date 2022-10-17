@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.funny.jam.DTO.BoardDto;
 import com.funny.jam.Entity.Board;
-import com.funny.jam.Entity.Type;
+import com.funny.jam.Entity.Types;
 
 public interface BoardService {
     
@@ -15,7 +15,7 @@ public interface BoardService {
     default BoardDto entityToDTO(Board boards) {
 
 
-        List<List<Type>> HashTags = new ArrayList<List<Type>>();
+        List<List<Types>> HashTags = new ArrayList<List<Types>>();
 
         HashTags.add(boards.getClohtes().getHashtag());
         HashTags.add(boards.getMusic().getHashtag());
