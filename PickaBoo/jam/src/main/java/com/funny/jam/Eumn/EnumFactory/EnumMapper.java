@@ -1,8 +1,10 @@
-package com.funny.jam.Eumn;
+package com.funny.jam.Eumn.EnumFactory;
 import java.util.LinkedHashMap;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.funny.jam.Eumn.ViewDataStatusEnum;
 
 @Configuration
 public class EnumMapper {

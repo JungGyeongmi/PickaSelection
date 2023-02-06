@@ -6,10 +6,11 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum ViewDataStatusEnum implements EnumMapperType
-{
-    UNDECIDED("대기중"),
-    CONFIRMED("선택");
+public enum ViewDataCategoryEnum implements EnumMapperType {
+    
+    
+    UNDECIDED("미정"),
+    WORK("출근룩");
 
     @Getter
     private final String title;

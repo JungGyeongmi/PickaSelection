@@ -1,4 +1,4 @@
-package com.funny.jam.Eumn;
+package com.funny.jam.Eumn.EnumFactory;
 
 import lombok.Getter;
 
@@ -8,7 +8,7 @@ public class EnumMapperValue
     private String code;
     private String title;
 
-    public EnumMapperValue(ViewDataStatusEnumMapperType enumMapperType) 
+    public EnumMapperValue(EnumMapperType enumMapperType) 
     {
         code = enumMapperType.getCode(); // ViewDataStatusEnum 의 UNDECIDED 내지 CONFIRM 
         title = enumMapperType.getTitle();// ViewDataStatusEnum 의 대기중 내지 선택 

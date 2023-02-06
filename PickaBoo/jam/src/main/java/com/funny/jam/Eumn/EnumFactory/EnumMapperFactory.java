@@ -1,4 +1,4 @@
-package com.funny.jam.Eumn;
+package com.funny.jam.Eumn.EnumFactory;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +17,7 @@ public class EnumMapperFactory
     private Map<String, List<EnumMapperValue>> factory;
 
     // 새로운 Enum 종류를 추가하는 함수
-    public void put(String key, Class<? extends ViewDataStatusEnumMapperType> target) {
+    public void put(String key, Class<? extends EnumMapperType> target) {
         factory.put(key, toEnumValues(target));
     }
 
@@ -27,7 +27,7 @@ public class EnumMapperFactory
     }
 
     // Enum의 내용들을 List로 바꾸어주는 함수
-    private List<EnumMapperValue> toEnumValues(Class<? extends ViewDataStatusEnumMapperType> target) {
+    private List<EnumMapperValue> toEnumValues(Class<? extends EnumMapperType> target) {
         return Arrays.stream(target.getEnumConstants())
             .map(EnumMapperValue::new)
             .collect(Collectors.toList());
