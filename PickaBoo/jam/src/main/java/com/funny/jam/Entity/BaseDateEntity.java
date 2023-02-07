@@ -1,4 +1,4 @@
-package com.funny.jam.Entity;
+package com.funny.jam.entity;
 
 import java.time.LocalDateTime;
 

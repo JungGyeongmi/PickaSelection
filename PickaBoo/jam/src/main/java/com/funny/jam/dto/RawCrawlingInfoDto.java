@@ -1,16 +1,18 @@
-package com.funny.jam.DTO;
+package com.funny.jam.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RawCrawingInfoDto {
+@Getter
+public class RawCrawlingInfoDto {
   private String siteLinkInfo;
   private String imageRemotPathInfo;
-  private String keywordInfo; 
+  private String keywordInfo;
 }

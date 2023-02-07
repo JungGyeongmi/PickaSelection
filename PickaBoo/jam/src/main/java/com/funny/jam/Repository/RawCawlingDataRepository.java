@@ -1,14 +1,13 @@
-package com.funny.jam.Repository;
+package com.funny.jam.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.funny.jam.Entity.RawCrawlingEntity;
+import com.funny.jam.entity.RawCrawlingEntity;
 
-public interface RawCawlingDataRepository extends JpaRepository<RawCrawlingEntity, Double> 
-{
+public interface RawCawlingDataRepository extends JpaRepository<RawCrawlingEntity, Double> {
     @Query("SELECT raw FROM RawCrawlingEntity raw")
-    List<Object> getRawCrawList();
+    List<RawCrawlingEntity> getRawCrawList();
 }

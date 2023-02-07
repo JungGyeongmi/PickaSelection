@@ -1,31 +1,25 @@
-package com.funny.jam.Controller.boardPageController;
+package com.funny.jam.controller.boardPageController;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import lombok.RequiredArgsConstructor;
+import com.funny.jam.service.crawling.CrawlingDataService;
+import com.funny.jam.service.crawling.SelectedCrawlingDataService;
 
+import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
 public class BoardController {
-    
-//    private final BoardService boardService;
-    
- /*
-     @GetMapping({ "/", "" })
-    public String getBoardPage(Model model) {
 
-        List<BoardDto> boardList = boardService.getBoardDetails();
-        model.addAttribute("boardList", boardList);
-
-        return "board";
-    }
- */
+    private final CrawlingDataService rawdataService;
+    private final SelectedCrawlingDataService selectedService;
 
     @GetMapping({ "/", "" })
-    public String getBoardPage()
-    {
+    public String getBoardPage(Model model) {
+        model.addAttribute("rawData", rawdataService.getRawCrawlingData());
+        model.addAttribute("selectedData", selectedService.getViewCrawlingData());
         return "board";
     }
 

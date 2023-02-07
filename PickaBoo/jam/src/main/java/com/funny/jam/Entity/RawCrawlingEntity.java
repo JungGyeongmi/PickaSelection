@@ -1,4 +1,4 @@
-package com.funny.jam.Entity;
+package com.funny.jam.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

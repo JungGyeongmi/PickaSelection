@@ -1,4 +1,4 @@
-package com.funny.jam.DTO;
+package com.funny.jam.dto;
 
 import java.util.List;
 

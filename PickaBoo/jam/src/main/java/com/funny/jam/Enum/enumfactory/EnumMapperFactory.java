@@ -1,4 +1,4 @@
-package com.funny.jam.Eumn.EnumFactory;
+package com.funny.jam.Enum.enumfactory;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,8 +10,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class EnumMapperFactory 
-{
+public class EnumMapperFactory {
     /* https://mangkyu.tistory.com/74 */
     // 다양한 종류의 Enum을 생성 및 관리하는 factory
     private Map<String, List<EnumMapperValue>> factory;
@@ -29,7 +28,7 @@ public class EnumMapperFactory
     // Enum의 내용들을 List로 바꾸어주는 함수
     private List<EnumMapperValue> toEnumValues(Class<? extends EnumMapperType> target) {
         return Arrays.stream(target.getEnumConstants())
-            .map(EnumMapperValue::new)
-            .collect(Collectors.toList());
+                .map(EnumMapperValue::new)
+                .collect(Collectors.toList());
     }
 }
