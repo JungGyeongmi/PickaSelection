@@ -36,9 +36,8 @@ public class CrawlingDataServiceImpl implements CrawlingDataService {
     @Override
     public void removeRawWithView(long seq) {
 
-        if (viewRepository.deleteBySeq(seq)) { // 연결 삭제
-            repository.deleteBySeq(seq); // 본체 삭제
-        }
+        // if (viewRepository.deleteBySeq(seq) > 0) { // 연결 삭제 }
+        repository.deleteBySeq(seq); // 본체 삭제
     }
 
 }

@@ -32,11 +32,11 @@ public class SelectedCrawlingDataServiceImpl implements SelectedCrawlingDataServ
 
     @Override
     public void DeleteViewItemWithIndex(Long index) {
-        repositroy.deleteByIndex(index);
+        // repositroy.deleteByIndex(index);
     }
 
     @Override
     public void ModifyViewKeywordWithIndex(String modiStr, Long index) {
-        repositroy.ModifyImageKeyWord(modiStr, index);
+        // repositroy.ModifyImageKeyWord(modiStr, index);
     }
 }

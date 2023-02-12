@@ -8,7 +8,9 @@
     <title>테스트 메인</title>
 </head>
 <body>
-  <img src="${selectedData.get(0).image_Remote_path}" alter="ttt"/>
+  <img th:src="${selectedData.get(0).image_Remote_path}" alter="ttt"/>
+  [[${selectedData.get(0).image_Remote_path}]]
+  <img src="https://t1c.coupangcdn.com/thumbnails/remote/710x710ex/image/vendor_inventory/8c4b/7f6b4ab8292ca5dbb97645b3fef11503ca0b65f82ca056a078194ce50b38.jpg" />
   <!--  [[${rawData.get(0).imageRemotPathInfo}]]
     [[${selectedData.get(0).image_Remote_path}]]-->
 </body>

@@ -13,6 +13,6 @@ public interface RawCawlingDataRepository extends JpaRepository<RawCrawlingEntit
     List<RawCrawlingEntity> getRawCrawList();
 
     @Modifying
-    @Query("delete from RawCrawlingEntity raw where raw.seq=:seq")
+    @Query("delete from RawCrawlingEntity raw where raw.seq =:seq")
     void deleteBySeq(Long seq);
 }
