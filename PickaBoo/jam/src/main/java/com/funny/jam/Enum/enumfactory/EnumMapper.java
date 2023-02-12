@@ -3,7 +3,6 @@ package com.funny.jam.Enum.enumfactory;
 import java.util.LinkedHashMap;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import com.funny.jam.Enum.ViewDataStatusEnum;
 

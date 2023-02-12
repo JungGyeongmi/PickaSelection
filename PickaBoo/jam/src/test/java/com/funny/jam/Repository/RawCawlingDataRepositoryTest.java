@@ -19,7 +19,7 @@ public class RawCawlingDataRepositoryTest {
     public void insertDummies() {
         IntStream.rangeClosed(0, 30).forEach(idx -> {
             RawCrawlingEntity rawEntity = RawCrawlingEntity.builder()
-                    .seq(idx)
+                    .seq(Long.valueOf(idx))
                     .siteLinkInfo("https://www." + idx + ".com")
                     .imageRemotPathInfo("C:\\TestCrawlingData\\Image")
                     .keywordInfo("테스트")

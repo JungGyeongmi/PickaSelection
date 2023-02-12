@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BoardDto {
 
-    private long bno;
+    private Long bno;
 
     private String musicType;
 

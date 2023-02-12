@@ -15,11 +15,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class RawCrawlingEntity 
-{
+public class RawCrawlingEntity {
     @Id
-    private double seq;
+    private Long seq;
     private String siteLinkInfo;
     private String imageRemotPathInfo;
-    private String keywordInfo; 
+    private String keywordInfo;
 }

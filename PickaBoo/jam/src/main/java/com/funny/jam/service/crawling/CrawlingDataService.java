@@ -8,6 +8,8 @@ import com.funny.jam.entity.RawCrawlingEntity;
 public interface CrawlingDataService {
     List<RawCrawlingInfoDto> getRawCrawlingData();
 
+    void removeRawWithView(long seq);
+
     default RawCrawlingInfoDto entityToDto(RawCrawlingEntity entity) {
         return RawCrawlingInfoDto.builder()
                 .siteLinkInfo(entity.getSiteLinkInfo())

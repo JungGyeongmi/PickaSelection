@@ -19,7 +19,7 @@ public class BoardController {
     @GetMapping({ "/", "" })
     public String getBoardPage(Model model) {
         model.addAttribute("rawData", rawdataService.getRawCrawlingData());
-        model.addAttribute("selectedData", selectedService.getViewCrawlingData());
+        model.addAttribute("selectedData", selectedService.GetViewCrawlingData());
         return "board";
     }
 

@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 public class RawCrawlingInfoDto {
+  private Long seq;
   private String siteLinkInfo;
   private String imageRemotPathInfo;
   private String keywordInfo;

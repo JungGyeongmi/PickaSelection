@@ -6,7 +6,11 @@ import com.funny.jam.dto.ViewCrawlingDataDto;
 import com.funny.jam.entity.ViewCrawlingEntity;
 
 public interface SelectedCrawlingDataService {
-    List<ViewCrawlingDataDto> getViewCrawlingData();
+    List<ViewCrawlingDataDto> GetViewCrawlingData();
+
+    void DeleteViewItemWithIndex(Long index);
+
+    void ModifyViewKeywordWithIndex(String modiStr, Long index);
 
     default ViewCrawlingDataDto entityToDTO(ViewCrawlingEntity entity) {
         ViewCrawlingDataDto viewDto = ViewCrawlingDataDto.builder()

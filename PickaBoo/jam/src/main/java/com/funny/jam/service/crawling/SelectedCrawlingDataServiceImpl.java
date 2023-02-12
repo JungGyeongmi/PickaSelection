@@ -16,17 +16,27 @@ import java.util.List;
 public class SelectedCrawlingDataServiceImpl implements SelectedCrawlingDataService {
 
     @Autowired
-    ViewCrawlingDataRepository viewCrawlingRepository;
+    ViewCrawlingDataRepository repositroy;
 
     @Override
-    public List<ViewCrawlingDataDto> getViewCrawlingData() {
+    public List<ViewCrawlingDataDto> GetViewCrawlingData() {
 
         List<ViewCrawlingDataDto> viewList = new ArrayList<ViewCrawlingDataDto>();
 
-        viewCrawlingRepository.getViewDataList().forEach(i -> {
+        repositroy.getViewDataList().forEach(i -> {
             viewList.add(entityToDTO(i));
         });
 
         return viewList;
+    }
+
+    @Override
+    public void DeleteViewItemWithIndex(Long index) {
+        repositroy.deleteByIndex(index);
+    }
+
+    @Override
+    public void ModifyViewKeywordWithIndex(String modiStr, Long index) {
+        repositroy.ModifyImageKeyWord(modiStr, index);
     }
 }

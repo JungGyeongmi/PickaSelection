@@ -7,11 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.funny.jam.Enum.ViewDataCategoryEnum;
+import com.funny.jam.Enum.ViewDataStatusEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,9 +20,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-import com.funny.jam.Enum.ViewDataCategoryEnum;
-import com.funny.jam.Enum.ViewDataStatusEnum;
 
 @Entity
 @Builder
@@ -33,7 +31,7 @@ import com.funny.jam.Enum.ViewDataStatusEnum;
 public class ViewCrawlingEntity implements Serializable {
 
     @Id
-    private double image_index; // 인덱스(seq)
+    private Long image_index; // 인덱스(seq)
     private String image_Remote_path; // 이미지 경로 새로 저장경로 생성하고 넣어줌
     private String image_kyeword; // 키워드
 
